@@ -1,13 +1,22 @@
 vector_db:
-  vdb_name: "trading-bot-db"
+  index_name: "trading-bot-db"
+
+retriever:
+  top_k: 3
+  score_threshold: 0.5
 
 embedding_model:
   provider: "google"
   model_name: "models/gemini-embedding-001"
 
 llm:
-  provider: "google"
-  model_name: "gemini-2.5-flash"  
+  google:
+    provider: "google"
+    model_name: "gemini-2.5-flash"
+  groq:
+    provider: "groq"
+    model_name: "deepseek-r1-distill-llama-70b"
 
-retriever:
-  top_k: 3
+tools:
+  tavily:
+    max_results: 5
