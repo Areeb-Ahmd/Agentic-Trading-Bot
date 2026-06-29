@@ -1,0 +1,13 @@
+vector_db:
+  vdb_name: "trading-bot-db"
+
+embedding_model:
+  provider: "google"
+  model_name: "models/gemini-embedding-001"
+
+llm:
+  provider: "google"
+  model_name: "gemini-2.5-flash"  
+
+retriever:
+  top_k: 3
